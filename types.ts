@@ -13,3 +13,36 @@ const stringArray: string[] = ['hello', 'typescript'];
 
 //Tuple
 const contact: [string, number] = ['Vadzim', 23455];
+
+//Any
+let variable: any = 45;
+variable = 'str';
+variable = [];
+
+//-----
+function sayMyName(name: string): void {
+    console.log(name);
+}
+
+sayMyName('Michael');
+
+//Never
+function throwError(message: string): never {
+    throw new Error(message);
+}
+
+function infinite(): never {
+    while (true) {}
+}
+
+//Type
+type Login = string;
+const login: Login = 'Admin';
+const login2: Login = 34;//error
+
+type ID = string | number;
+const id: ID = 1234;
+const id2: ID = '1234';
+const id3: ID = true;//error
+
+type someType = null | undefined | string;
